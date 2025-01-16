@@ -1,10 +1,16 @@
 <div id="<%= dom_id category %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
+    <strong class="block font-medium mb-1">Nome:</strong>
     <%= category.name %>
   </p>
   <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
+    <strong class="block font-medium mb-1">Descrição</strong>
     <%= category.description %>
   </p>
+
+    <p class="my-5">
+    <strong class="block font-medium mb-1">Imagem:</strong>
+    <%= category.image.present? ? image_tag(category.image, size: "200x200", class: "rounded-lg") : image_tag("https://via.placeholder.com/200") %>
+  </p>
+
 </div>
